@@ -12,8 +12,11 @@ seq = np.array([i for i in range(10)])
 print(captions)
 np.random.shuffle(seq)
 print(seq)
-@app.route('/',methods=['GET', 'POST'])
+@app.route("/")
 def index():
+    return render_template("disc.html")
+@app.route('/home',methods=['GET', 'POST'])
+def home():
     if request.method == 'GET':
         session["qno"]=1
         session['answers']=[]

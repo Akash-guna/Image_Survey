@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <style>
+            
+                .center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border: 5px solid #FF0000;
+                padding: 10px;
+  text-align: center;
+             text-justify: inter-word;
+                }
+
+                 </style>
+    </head>
+    <body >
+        <div class="center"> <h1> Survey</h1>
+            <br>
+            <h2>Select the best heat map that represents best the input image</h2>
+            <p style = "text-align: justify;text-justify: inter-word;"> Image Captioning is a task where a caption is generated for the image based on its content. For instance, if an image contains a "Cat and Dog" an example caption is "A Cat and Dog are fighting". Here, we try to explain why the following caption is generated given the image. We provide explanations via heatmaps. In the Heatmaps, red Color signifies more important regions and Blue Color signifies regions with no importance. </p>
+            <button><a href="{{url_for('home')}}">Click Here to Begin</a></button>
+        </div>
+       </body>
+</html>
