@@ -5,7 +5,7 @@ import json
 import string
 import random
 app= Flask(__name__)
-app.secret_key = b'_5#y2L"F4Q8z\n\xec]/'
+app.secret_key = ''.join(random.choices(string.ascii_uppercase +string.digits, k = 14))
 data = pd.read_excel('captions.xlsx')
 captions=data['Caption'].to_numpy()
 seq = np.array([i for i in range(10)])
