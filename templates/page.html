@@ -1,0 +1,45 @@
+
+<html>
+    <head>
+        <style>
+            .center {
+                margin: auto;
+                width: 55%;
+                border: 5px solid #FF0000;
+                padding: 10px;
+                }
+                 </style>
+    </head>
+    <body>
+        <div class="center">
+            <p style="text-align: right;"> Question {{qno}}/20</p>
+            <table style = "text-align: center;">
+                <tr>
+                    <td>Input Image</td>
+                    <td>Image 1</td>
+                    <td>Image 2</td>
+                </tr>
+                <tr>
+                    <td style="padding:0 50px 0 10px;"><img src={{url_for('static',filename=ino)}} width="200px" height="200px"></td>
+                    <td style="padding:0 50px 0 10px;"><img src={{url_for('static',filename=gan_no)}} width="200px" height="200px"></td>
+                    <td><img src={{url_for('static',filename=grad_no)}} width="200px" height="200px"></td>
+                </tr>
+            </table>
+            <p style="text-align:center"> {{caption}}</p>
+            <!-- <img src="https://media.istockphoto.com/photos/mountains-velliangiri-view-with-blue-sky-and-green-fores-picture-id1281783803?k=20&m=1281783803&s=612x612&w=0&h=CXI_KRSq8jH6PJqt7VyGHw43xxgB2eV0FKXQX7FHjfk=" width="200px" height="200px">
+             -->
+        </div>
+        <br>
+        <div class="center">
+            <p> Which Image gives better interpretations?</p>
+            <form method="POST" action="/" style="text-align:center">
+                <input type="radio" id="Image 1" name="Image" value="1">
+                <label>Image 1</label><br>
+                <input type="radio" id="Image 2" name="Image" value="2">
+                <label>Image 2</label><br>
+                <br>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </body>
+</html>
